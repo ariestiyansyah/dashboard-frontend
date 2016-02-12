@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>IndonesiaX Dashboard</title>
+  <link rel="stylesheet" href="index.css">
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <nav class='nav'>
+      <span class="nav-logo">
+        <img src="https://indonesiax.co.id/static/images/default-theme/logo.png" alt="edX" title="edX" itemprop="url" height="30" width="64">
+      </span>
+      <span class="nav-provider">IX:</span>
+      <span class="nav-text">100x </span>
+      <span class="nav-text nav-hide-on-small">IndonesiaX Learning Dashboard Challenge</span>
+      <span class="nav-text nav-float-right">
+        <select name="student" id="select-student"></select>
+        <script src="student-selectbox.js"></script>
+      </span>
+    </nav>
+  </header>
+  <nav class="nav-course">
+    <span>Courseware</span>
+    <span class="tab-active">Progress</span>
+  </nav>
+  <div class="content">
+    <div id="lcol">
+      <div class="card">
+        <h2 class="card-header">Progress</h2>
+        <div class="card-content" id="progress">
+          <div class="chart-options">
+            <label for="category">Show</label>
+            <select name="category" id="select-category">
+              <option value="problem" selected>problem</option>
+              <option value="video">video</option>
+            </select>
+            <label for="peers"> progress compared to</label>
+            <select name="peers" id="select-peer"></select>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="rcol">
+      <div class="card">
+        <h2 class="card-header">Timeline</h2>
+        <div class="card-content" id="timeline">
+          <div class="chart-options">
+            <label for="timelinetype">Show</label>
+            <select name="timelinetype" id="select-timelinetype">
+              <option value="accumulated" selected>accumulated</option>
+              <option value="perday">perday</option>
+            </select>
+            <span>progress</span>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <h2 class="card-header">Leaderboard</h2>
+        <div class="card-content" id="leaderboard">
+          <div class="chart-options">
+            <label for="top10">Show</label>
+            <select name="top10" id="select-top10">
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="progress-donut-chart.js"></script>
+  <script src="timeline-line-chart.js"></script>
+  <script src="leaderboard-bar-chart.js"></script>
+</body>
+
+</html>
